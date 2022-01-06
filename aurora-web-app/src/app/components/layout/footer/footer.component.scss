@@ -1,0 +1,8 @@
+@import '../../../theme/variables.scss';
+@import '../../../theme/colors.scss';
+
+.footer {
+  padding: $app-gutter;
+  background-color: $app-footer-bg-color;
+  text-align: center;
+}

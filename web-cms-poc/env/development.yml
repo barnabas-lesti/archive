@@ -1,0 +1,5 @@
+common:
+  ENV: "development"
+  PORT: 3000
+api:
+  API_DOMAIN: "http://localhost:8080"

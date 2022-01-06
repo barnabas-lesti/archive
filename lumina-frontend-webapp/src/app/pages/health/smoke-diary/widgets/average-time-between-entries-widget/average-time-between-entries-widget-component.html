@@ -1,0 +1,11 @@
+<app-base-smoke-widget class="app-average-time-between-entries-widget" header="Average time between smokes">
+  <div class="p-field">
+    <label>What range should we check?</label>
+    <p-dropdown [(ngModel)]="selectorValue" [options]="selectorOptions"
+      [disabled]="isLoading" (onChange)="loadAverageTime()"></p-dropdown>
+  </div>
+
+  <div class="p-field">
+    <div class="average-time">{{averageTime}}</div>
+  </div>
+</app-base-smoke-widget>

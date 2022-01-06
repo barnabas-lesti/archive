@@ -1,0 +1,30 @@
+@import './theme/variables.scss';
+@import './theme/colors.scss';
+
+.app {
+  &__brand {
+    margin-left: 8px;
+  }
+
+  &__toolbar {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  &__sidebar {
+    min-width: 80%;
+  }
+
+  &__sidebar-link {
+    text-decoration: none;
+
+    &--active {
+      background-color: $app-sidebar-link-active-color;
+    }
+  }
+
+  &__sidebar-container {
+    min-height: calc(100vh - $app-toolbar-height);
+    padding-top: $app-toolbar-height;
+  }
+}

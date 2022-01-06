@@ -1,0 +1,40 @@
+@import './variables.scss';
+@import './icons.scss';
+
+@import '../../../node_modules/primeicons/primeicons.css';
+@import '../../../node_modules/primeng/resources/themes/saga-blue/theme.css';
+@import '../../../node_modules/primeng/resources/primeng.min.css';
+
+@import '../../../node_modules/primeflex/src/_grid.scss';
+@import '../../../node_modules/primeflex/src/_formlayout.scss';
+
+html {
+  font-family: $font-family;
+  font-size: $font-size;
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+// Global NgPrime overrides
+.p-grid {
+  margin: 0;
+}
+
+.p-field {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.p-confirm-popup {
+  .p-confirm-popup-message {
+    margin-left: 0;
+  }
+}

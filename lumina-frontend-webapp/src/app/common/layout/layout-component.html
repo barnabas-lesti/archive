@@ -1,0 +1,15 @@
+<div class="app-layout">
+  <p-toolbar>
+    <i class="sidebar-button pi pi-bars" (click)="toggleSidebar()"></i>
+    <div class="brand">Lumina</div>
+    <p-avatar [image]="options.avatarImageUrl" shape="circle"></p-avatar>
+  </p-toolbar>
+
+  <p-sidebar [(visible)]="isSidebarOpen" [showCloseIcon]="false">
+    <p-menu [model]="sidebarItems"></p-menu>
+  </p-sidebar>
+
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

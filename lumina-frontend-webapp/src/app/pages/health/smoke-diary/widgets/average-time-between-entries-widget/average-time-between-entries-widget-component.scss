@@ -1,0 +1,11 @@
+@import '../../../../../theme/variables.scss';
+
+:host ::ng-deep {
+  .app-average-time-between-entries-widget {
+    .average-time {
+      font-size: 4rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

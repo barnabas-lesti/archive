@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+img {
+  max-width: 100%;
+}
+
+.text {
+  &--justify {
+    text-align: justify;
+  }
+}
+
+.content {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  &__section {
+    padding: $app-gutter $app-gutter 0 $app-gutter;
+
+    &:last-of-type {
+      padding-bottom: $app-gutter;
+    }
+
+    &--stretch {
+      padding: 0;
+    }
+  }
+}

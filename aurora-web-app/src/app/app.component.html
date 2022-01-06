@@ -1,0 +1,24 @@
+<ng-container class="app">
+  <mat-toolbar class="app__toolbar">
+    <button mat-icon-button aria-label="Menu icon" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="app__brand">Aurora</span>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="app__sidebar-container">
+    <mat-sidenav #sidenav mode="over" fixedInViewport [fixedTopGap]="56" class="app__sidebar">
+      <mat-list>
+        <a *ngFor="let menuItem of menuItems" [routerLink]="menuItem.routerLink" routerLinkActive="app__sidebar-link--active" [routerLinkActiveOptions]="{ exact: menuItem.exact }"
+          class="app__sidebar-link" mat-list-item>
+          <mat-icon mat-list-icon>{{ menuItem.icon }}</mat-icon>
+          <div mat-line>{{ menuItem.label }}</div>
+        </a>
+       </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

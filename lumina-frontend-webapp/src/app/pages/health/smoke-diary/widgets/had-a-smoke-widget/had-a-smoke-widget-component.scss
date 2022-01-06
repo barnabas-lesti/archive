@@ -1,0 +1,17 @@
+@import '../../../../../theme/variables.scss';
+
+:host ::ng-deep {
+  .app-had-a-smoke-widget {
+    .confirmation {
+      display: flex;
+      margin-left: $gutter / -2;
+      margin-right: $gutter / -2;
+
+      p-button {
+        flex-grow: 1;
+        margin-left: $gutter / 2;
+        margin-right: $gutter / 2;
+      }
+    }
+  }
+}

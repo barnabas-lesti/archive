@@ -1,0 +1,43 @@
+@import '../../../../theme/variables.scss';
+@import '../../../../theme/colors.scss';
+
+.above-the-fold {
+  position: relative;
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__image {
+    background-position: center;
+  }
+
+  &__overlay {
+    background-color: $app-overlay-color;
+  }
+
+  &__content {
+    color: $app-white-color;
+    padding: $app-gutter;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: $app-gutter;
+  }
+
+  &__cta {
+    margin-top: $app-gutter;
+  }
+}

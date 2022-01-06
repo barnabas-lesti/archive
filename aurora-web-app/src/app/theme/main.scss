@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+
+@import './colors.scss';
+@import './settings.scss';
+
+@include mat-core();
+
+$app-theme: mat-light-theme((
+  color: (
+    primary: $app-primary-color,
+    accent: $app-accent-color,
+    warn: $app-warn-color,
+  )
+));
+
+@include angular-material-theme($app-theme);
+
+// Angular Material base and overrides
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

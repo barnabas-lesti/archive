@@ -1,0 +1,24 @@
+<app-base-smoke-widget class="app-had-a-smoke-widget" header="Had a smoke">
+  <div class="p-field">
+    <label>When did you have the smoke?</label>
+    <p-dropdown [(ngModel)]="selectorValue" [options]="selectorOptions"></p-dropdown>
+  </div>
+
+  <div *ngIf="selectorValue === 'dateTime'" class="p-field">
+    <label for="hadASmokeDateTime">Date and time</label>
+    <p-calendar inputId="hadASmokeDateTime" [(ngModel)]="dateTime" [showTime]="true" [maxDate]="maxDate"
+      [readonlyInput]="true" (onShow)="updateMaxDate()"></p-calendar>
+  </div>
+
+  <div *ngIf="!showConfirmation" class="p-field">
+    <p-button label="Had a smoke" styleClass="p-button-raised" [disabled]="isLoading"
+      (onClick)="requestConfirmation()"></p-button>
+  </div>
+
+  <div *ngIf="showConfirmation" class="confirmation p-field">
+    <p-button label="Confirm" styleClass="p-button-success p-button-raised" [disabled]="isLoading"
+      (onClick)="confirm()"></p-button>
+    <p-button label="Cancel" styleClass="p-button-plain p-button-text p-button-raised" [disabled]="isLoading"
+      (onClick)="cancel()"></p-button>
+  </div>
+</app-base-smoke-widget>

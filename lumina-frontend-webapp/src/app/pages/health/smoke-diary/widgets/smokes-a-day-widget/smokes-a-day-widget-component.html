@@ -1,0 +1,17 @@
+<app-base-smoke-widget class="app-smokes-a-day-widget" header="Smokes a day">
+  <div class="p-field">
+    <label>What day should we check?</label>
+    <p-dropdown [(ngModel)]="selectorValue" [options]="selectorOptions"
+      [disabled]="isLoading" (onChange)="loadNumberOfSmokeDiaryEntries()"></p-dropdown>
+  </div>
+
+  <div *ngIf="selectorValue === 'date'" class="p-field">
+    <label for="smokesADayDate">Date</label>
+    <p-calendar inputId="smokesADayDate" [(ngModel)]="date" [readonlyInput]="true"
+      (onSelect)="loadNumberOfSmokeDiaryEntries()"></p-calendar>
+  </div>
+
+  <div class="p-field">
+    <div class="number-of-smoke-diary-entries">{{numberOfSmokeDiaryEntries}}</div>
+  </div>
+</app-base-smoke-widget>

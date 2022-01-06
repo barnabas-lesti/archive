@@ -1,0 +1,18 @@
+.NotFoundTemplate {
+	text-align: center;
+
+	h1,
+	img {
+		margin-top: 1.5rem;
+	}
+
+	@media screen and (min-width: $layout_mdMin) {
+		img {
+			margin-top: 3rem;
+		}
+
+		h1 {
+			margin-top: 2rem;
+		}
+	}
+}

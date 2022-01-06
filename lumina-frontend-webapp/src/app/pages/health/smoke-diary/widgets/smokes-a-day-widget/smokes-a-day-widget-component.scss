@@ -1,0 +1,11 @@
+@import '../../../../../theme/variables.scss';
+
+:host ::ng-deep {
+  .app-smokes-a-day-widget {
+    .number-of-smoke-diary-entries {
+      font-size: 5rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

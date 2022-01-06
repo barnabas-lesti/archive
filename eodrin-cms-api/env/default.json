@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"SECRET": null,
+		"TOKEN_EXPIRATION": null
+	},
+	"common": {
+		"ENV": "default",
+		"PORT": 8080
+	},
+	"dataStore": {
+		"BUCKET_PATH": null,
+		"BUCKET_URI": null,
+		"MONGO_URI": null
+	}
+}

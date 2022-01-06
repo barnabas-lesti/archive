@@ -1,0 +1,32 @@
+@import '../../theme/variables.scss';
+
+$sidebar-button-size: 32px;
+
+:host ::ng-deep {
+  .sidebar-button {
+    font-size: $sidebar-button-size;
+  }
+
+  .brand {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .p-toolbar {
+    border: 0;
+
+    .p-avatar {
+      overflow: hidden;
+    }
+  }
+
+  .p-sidebar {
+    padding: $gutter 0;
+
+    .p-menu {
+      margin: 0;
+      border: 0;
+      width: 100%;
+    }
+  }
+}

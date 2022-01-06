@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+$app-primary-color: mat-palette($mat-green, 700);
+$app-accent-color:  mat-palette($mat-brown, 700);
+$app-warn-color:    mat-palette($mat-red);
+
+$app-white-color: #ffffff;
+$app-sidebar-link-active-color: map-get($app-primary-color, 100);
+$app-footer-bg-color: map-get($mat-grey, 200);
+$app-overlay-color: rgba(0, 0, 0, .5);
